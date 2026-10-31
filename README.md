@@ -154,7 +154,7 @@ make O=out ARCH=arm64 LLVM=1 LLVM_IAS=1 CC=clang -j$(nproc) Image
 - **BakaSU / ReSukiSU**：[ReSukiSU/ReSukiSU](https://github.com/ReSukiSU/ReSukiSU) (GPL-3.0)
 - **AnyKernel3**：[osm0sis/AnyKernel3](https://github.com/osm0sis/AnyKernel3) (GPL-3.0)
 - **OrangeFox**：[Ctapchuk/android_device_xiaomi_marble-OFRP](https://github.com/Ctapchuk/android_device_xiaomi_marble-OFRP)
-- **工程协作**：本项目在固件代差适配、GKI kABI 结构体偏移排查、Full LTO 链接优化与容器验证中得到了 **Google DeepMind Antigravity AI 助理** 的协同技术协助。
+- **工程协作**：本项目在固件代差适配、GKI kABI 结构体偏移排查、Full LTO 链接优化与容器验证中得到了 **DeepSeek AI** 与 **Google DeepMind Antigravity AI 助理** 的协同技术协助。
 
 ---
 

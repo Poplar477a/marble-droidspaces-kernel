@@ -39,7 +39,7 @@
 
 ## 2. 协助与鸣谢
 
-本项目在排查固件代差、GKI 5.10 kABI 结构体偏移导致开机崩溃（bootloop）、Full LTO 链接内存耗尽（OOM）调优、BakaSU UAPI 头文件依赖修复及容器验证过程中，得到了 **Google DeepMind Antigravity AI 助理** 的全流程工程协同与深度技术协助。
+本项目在排查固件代差、GKI 5.10 kABI 结构体偏移导致开机崩溃（bootloop）、Full LTO 链接内存耗尽（OOM）调优、BakaSU UAPI 头文件依赖修复及容器验证过程中，得到了 **DeepSeek AI** 与 **Google DeepMind Antigravity AI 助理** 的全流程工程协同与深度技术协助。
 
 ---
 

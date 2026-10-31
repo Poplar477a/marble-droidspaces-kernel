@@ -23,3 +23,6 @@
 ### 校验和 (SHA-256)
 - `LineageOS24-marble-droidspaces-ksu-AK3.zip`: `a45ff660a4ae93a49042fd069d55af31c6e351ab6edc9320ad01bc13b0451b20`
 - `los-ksu-boot.img`: `6b7ed7249ae6b52d14172f45cd5814138bd1012b3ee12d3053dfc70ad0554c51`
+
+### 鸣谢与协助
+本项目在固件代差排查、kABI 结构体偏移修复、Full LTO 链接优化与容器实测中得到了 **DeepSeek AI** 与 **Google DeepMind Antigravity AI 助理** 的协同技术协助。
