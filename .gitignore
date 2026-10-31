@@ -1,0 +1,9 @@
+*.img
+*.zip
+*.tar.gz
+*.o
+*.cmd
+*~
+.DS_Store
+out/
+build/

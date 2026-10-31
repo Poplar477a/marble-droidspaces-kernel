@@ -1,0 +1,5 @@
+--- a/net/bluetooth/rfcomm/Makefile
++++ b/net/bluetooth/rfcomm/Makefile
+@@ -9,2 +9,3 @@
+ rfcomm-$(CONFIG_BT_RFCOMM_TTY)	+= tty.o
++CFLAGS_core.o += -Wno-error=frame-larger-than

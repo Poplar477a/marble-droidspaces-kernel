@@ -1,0 +1,11 @@
+--- a/drivers/Kconfig
++++ b/drivers/Kconfig
+@@ -237,2 +237,4 @@
+ endmenu
++
++source "drivers/kernelsu/Kconfig"
+--- a/drivers/Makefile
++++ b/drivers/Makefile
+@@ -190,2 +190,3 @@
+ obj-$(CONFIG_MOST)		+= most/
++obj-$(CONFIG_KSU) += kernelsu/

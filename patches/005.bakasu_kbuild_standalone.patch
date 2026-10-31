@@ -1,0 +1,25 @@
+--- a/Kbuild	2026-10-31 21:45:58.000000000 +0800
++++ b/Kbuild	2026-10-31 23:57:17.081603676 +0800
+@@ -64,7 +64,7 @@
+ 
+ LOCAL_GIT_EXISTS := $(shell test -e $(KSU_SRC)/../.git && echo 1 || echo 0)
+ 
+-ifeq ($(LOCAL_GIT_EXISTS),0)
++ifeq (0,1)  # patched: no git submodule check
+ $(info -- Can't find $(REPO_NAME) git submodule!)
+ $(info -- If you are using bazel to build this kernel,)
+ $(info -- Please go to Kbuild and change KSU_SRC to the absolute path of the KSU kernel folder.)
+@@ -77,10 +77,10 @@
+ 
+ $(shell cd $(KSU_SRC); [ -f ../.git/shallow ] && $(GIT_BIN) fetch --unshallow)
+ KSU_LOCAL_VERSION := $(shell cd $(KSU_SRC); $(GIT_BIN) rev-list --count HEAD)
+-KSU_VERSION := $(shell expr 30000 + $(KSU_LOCAL_VERSION) + 700)
++KSU_VERSION := 35171
+ 
+-KSU_TAG_NAME    := $(shell cd $(KSU_SRC); $(GIT_BIN) describe --abbrev=0 --tags 2>/dev/null || echo "v4.1.0")
+-KSU_COMMIT_SHA  := $(shell cd $(KSU_SRC); $(GIT_BIN) rev-parse --short=8 HEAD 2>/dev/null || echo "unknown")
++KSU_TAG_NAME    := v4.2.0-rc3
++KSU_COMMIT_SHA  := 35171baka
+ ifneq ($(shell cd $(KSU_SRC); $(GIT_BIN) diff-index --quiet HEAD; echo $$?),0)
+ KSU_COMMIT_SHA  := $(KSU_COMMIT_SHA)-dirty
+ endif
