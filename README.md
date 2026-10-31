@@ -2,7 +2,7 @@
 
 适用于 **Redmi Note 12 Turbo / POCO F5 (`marble` / `marblein`)**，运行于 **LineageOS 24 (Android 17, GKI 5.10)** 上的自定义内核。完整补齐 [Droidspaces](https://github.com/ravindu644/Droidspaces-OSS) 容器运行时所需的内核能力，并源码级集成 **BakaSU (ReSukiSU)** 内核 Root。
 
-提供经过严格实机验证的 **AnyKernel3 卡刷包**、**Fastboot boot 镜像**、完整补丁集合以及复现构建配置。
+提供经过严格实机验证的 **AnyKernel3 刷机包**、**Fastboot boot 镜像**、完整补丁集合以及复现构建配置。
 
 ---
 
@@ -19,7 +19,7 @@
 - **内置 BakaSU (ReSukiSU) 内核级 Root**：
   - 源码级集成 BakaSU v4.2.0-rc3 (Driver Version 35171)，开箱即用，无需依赖 LKM 运行时修补。
 - **双重刷入支持**：
-  - 提供 **AnyKernel3 卡刷包**（可在 OrangeFox / TWRP 中直接刷入）。
+  - 提供 **AnyKernel3 刷机包**（支持在 Kernel Flasher 等内核管理器中免重启直刷，亦可在 Recovery 中刷入）。
   - 提供 **Fastboot `boot.img` 镜像**（可在 Bootloader 模式下直接线刷）。
 
 ---
@@ -45,7 +45,7 @@
 
 请前往 [Releases 页面](../../releases/latest) 下载构建产物：
 
-- **AnyKernel3 卡刷包**：`LineageOS24-marble-droidspaces-ksu-AK3.zip`
+- **AnyKernel3 刷机包**：`LineageOS24-marble-droidspaces-ksu-AK3.zip`
   - SHA256: `a45ff660a4ae93a49042fd069d55af31c6e351ab6edc9320ad01bc13b0451b20`
 - **Fastboot 线刷镜像**：`los-ksu-boot.img`
   - SHA256: `6b7ed7249ae6b52d14172f45cd5814138bd1012b3ee12d3053dfc70ad0554c51`
@@ -54,12 +54,13 @@
 
 ### 2. 刷入方式
 
-#### 方式 A：AnyKernel3 卡刷（推荐）
+#### 方式 A：使用内核管理器刷入（推荐）
 
-1. 手机按住「电源键 + 音量加」进入 **OrangeFox**（或第三方 Recovery）。
-2. 将 `LineageOS24-marble-droidspaces-ksu-AK3.zip` 复制至手机存储（或使用 `adb sideload`）。
-3. 在 Recovery 中点击并刷入该 Zip 包，AnyKernel3 脚本会自动解包当前 boot 分区替换内核核心并回写。
-4. 刷完重启系统即可。
+1. 在手机上安装并打开 **Kernel Flasher**（或支持 AnyKernel3 规范的内核管理器）。
+2. 在管理器中选择下载好的 `LineageOS24-marble-droidspaces-ksu-AK3.zip`，授予 Root 权限并执行刷入。
+3. AnyKernel3 会自动在运行期就地解包当前槽位的 boot 分区，替换内核 Image 并保留原厂 Ramdisk 与上下文。
+4. 刷入完成后，在管理器中点击重启系统即可生效。
+*(备用方式：亦可在 OrangeFox / TWRP 等第三方 Recovery 中直接刷入该 Zip 包)*
 
 #### 方式 B：Fastboot 线刷
 

@@ -12,7 +12,7 @@
   - 内核源码级集成 BakaSU v4.2.0-rc3 (35171)，开箱即用，无需额外修补 boot.img。
 
 ### 刷入方式
-1. **AnyKernel3（推荐）**：在 OrangeFox / 第三方 Recovery 中直接刷入 `LineageOS24-marble-droidspaces-ksu-AK3.zip`。
+1. **AnyKernel3 刷机包（推荐）**：使用 **Kernel Flasher**（或支持 AnyKernel3 规范的内核管理器）在运行期直接免重启刷入 `LineageOS24-marble-droidspaces-ksu-AK3.zip`，亦可在 OrangeFox / 第三方 Recovery 中卡刷。
 2. **Fastboot 镜像**：手机进入 Fastboot 模式后执行：
    ```sh
    fastboot flash boot_a los-ksu-boot.img
